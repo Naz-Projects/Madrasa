@@ -6,18 +6,17 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .header {
   min-height: 100vh;
   width: 100%;
-  margin: auto;
-  background-image: url(images/pexels-kedar-bhave-2427797.jpg);
-  position: relative;
-  background-size: cover;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.07)),
+    url(images/pexels-kedar-bhave-2427797.jpg);
   background-position: center;
-  background-repeat: no-repeat;
-  height: fit-content;
+  background-size: cover;
+  position: relative;
 }
 
 nav {
@@ -65,6 +64,58 @@ nav img {
 .nav-links ul li:hover::after {
   width: 100%;
 }
+.text-box {
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 62px;
+}
+
+.text-box p {
+  color: #fff;
+  margin: 10px 0 40px;
+  font-size: 14px;
+}
+
+/*NAV responsive*/
+nav .fa {
+  display: none;
+}
+@media (max-width: 700px) {
+  .text-box h1 {
+    font-size: 20px;
+  }
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    background-color: #fff;
+    height: 100vh;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+  nav .fa {
+    display: block;
+    color: #a05bf6;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .nav-links ul {
+    padding: 30px;
+  }
+}
 
 .logo:hover {
   transition: 0.3s ease-in-out;
@@ -80,7 +131,7 @@ section {
 }
 
 .container {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   overflow-y: scroll;
   height: 100vh;
 }
@@ -153,6 +204,28 @@ section {
 .hero-btn:hover::before {
   width: 250%;
 }
+/*--------HEADER ANIMATION---------*/
+section .animate {
+  opacity: 0.1;
+  filter: blur(2px);
+  transition: 1.2s;
+}
+
+section.show-animate .animate {
+  opacity: 1;
+  filter: blur(0);
+}
+.header .animate {
+  transform: scale(0.7);
+}
+
+.header.show-animate .animate {
+  transform: scale(1);
+}
+
+/*-------Header Responsive---------*/
+@media (max-width: 720px) {
+}
 
 /*--------Event Slider---------*/
 .event-container {
@@ -175,6 +248,7 @@ p {
   border: none;
   width: 40%;
   min-width: auto;
+  overflow: hidden;
 }
 
 .swiper-slide img {
@@ -224,7 +298,8 @@ p {
   margin: 0 10px;
 }
 
-.about-us .about-row {
+.about-us .about-row,
+.about-us .about-row-2 {
   display: flex;
   justify-content: space-between;
 }
@@ -251,10 +326,36 @@ p {
   color: #fff;
   transition: 0.2s ease;
 }
+.logo-container img {
+  transition: 0.2s ease;
+}
 .box-2:hover,
-.box-1:hover {
+.box-1:hover,
+.logo-container img:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+
+/*-----About Us Animation-----*/
+.about-us .logo-container {
+  transform: translateY(200%);
+}
+.about-us.show-animate .logo-container {
+  transform: translateY(0);
+}
+
+.about-us .about-row {
+  transform: translateX(-100%);
+}
+.about-us.show-animate .about-row {
+  transform: translateX(0);
+}
+
+.about-us .about-row-2 {
+  transform: translateX(100%);
+}
+.about-us.show-animate .about-row-2 {
+  transform: translateX(0);
 }
 
 /*-----Mission-----*/
@@ -284,7 +385,9 @@ p {
   margin-top: 5%;
   justify-content: space-between;
 }
-
+.mission-col img {
+  max-width: 8rem;
+}
 .mission-col p {
   color: #000;
   font-size: 15px;
@@ -306,7 +409,7 @@ p {
   align-items: center;
   justify-content: center;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(115deg, #cfb8ec 10%, #d28bea 90%);
+  background: #fff;
 }
 .contact {
   height: 80vh;
@@ -531,13 +634,6 @@ footer,
   .footer .row a i {
     margin: 0% 3%;
   }
-}
-
-html,
-body,
-section,
-.container {
-  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
