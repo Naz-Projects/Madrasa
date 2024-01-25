@@ -12,7 +12,7 @@ html {
 .header {
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.07)),
+  background-image: linear-gradient(rgba(4, 2, 7, 0.7), rgba(0, 0, 0, 0.07)),
     url(images/pexels-kedar-bhave-2427797.jpg);
   background-position: center;
   background-size: cover;
@@ -64,25 +64,6 @@ nav img {
 .nav-links ul li:hover::after {
   width: 100%;
 }
-.text-box {
-  width: 90%;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.text-box h1 {
-  font-size: 62px;
-}
-
-.text-box p {
-  color: #fff;
-  margin: 10px 0 40px;
-  font-size: 14px;
-}
 
 /*NAV responsive*/
 nav .fa {
@@ -123,17 +104,6 @@ nav .fa {
 
 .logo:hover {
   transform: scale(1.1) translateY(-3px);
-}
-
-section {
-  scroll-snap-align: start;
-  height: 100vh;
-}
-
-.container {
-  scroll-snap-type: y proximity;
-  overflow-y: scroll;
-  height: 100vh;
 }
 
 .text-box {
@@ -224,7 +194,13 @@ section.show-animate .animate {
 }
 
 /*-------Header Responsive---------*/
-@media (max-width: 720px) {
+@media screen and (max-width: 720px) {
+  .text-box h1 {
+    font-size: 40px;
+  }
+  .text-box p {
+    font-size: 14px;
+  }
 }
 
 /*--------Event Slider---------*/
@@ -267,17 +243,31 @@ p {
 .swiper .swiper-pagination-bullet-active {
   background: #222;
 }
+/*-------Events Responsive------*/
+@media screen and (max-width: 720px) {
+  .event-container {
+    min-height: 70vh;
+  }
+  .event-container h1 {
+    font-size: 25px;
+    padding: 0 0 2rem 0;
+  }
+  .swiper {
+    width: 90%;
+  }
+}
 
 /*-----About Us-----*/
 .about-us {
+  min-height: 100vh;
   width: 80%;
   margin: auto;
   text-align: center;
-  height: 100vh;
   padding-top: 75px;
 }
 .about-us h1 {
   font-size: 40px;
+  font-weight: 600;
 }
 
 .riwaqlogo {
@@ -358,13 +348,46 @@ p {
   transform: translateX(0);
 }
 
+/*-------About Responsive------*/
+@media screen and (max-width: 720px) {
+  .logo-container img {
+    width: 120px;
+  }
+
+  .about-us {
+    padding: 0;
+  }
+  .about-us .about-row,
+  .about-us .about-row-2 {
+    flex-direction: column;
+  }
+  .about-us h1 {
+    font-size: 30px;
+  }
+  .about-us h4 {
+    font-size: 10px;
+    padding-bottom: 5px;
+  }
+  .box-2,
+  .box-1 {
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .box-2:hover,
+  .box-1:hover,
+  .logo-container img:hover {
+    transform: scale(1);
+    cursor: pointer;
+  }
+}
+
 /*-----Mission-----*/
 .mission {
   width: 80%;
   margin: auto;
   text-align: center;
   padding-top: 100px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 h1 {
@@ -403,7 +426,63 @@ p {
   padding: 20px 12px;
   box-sizing: border-box;
 }
+/*--------MISSION ANIMATION--------*/
+.mission .row .mission-col {
+  transition: 1.5s;
+}
+.mission .row .mission-col {
+  transform: translateX(-100%);
+}
 
+.mission.show-animate .row .mission-col {
+  transform: translateX(0);
+}
+
+.mission .showRight-animate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transition: 1s;
+  transition-delay: calc(0.1s * var(--i));
+}
+
+.mission.show-animate .showRight-animate {
+  width: 0;
+}
+/*--------MISSION RESPONSIVE--------*/
+@media screen and (max-width: 720px) {
+  .mission h1 {
+    font-size: 30px;
+  }
+  .mission .row {
+    flex-direction: column;
+  }
+  .mission {
+    padding-top: 100px;
+    min-height: 80vh;
+  }
+  .mission-col {
+    border-radius: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: 3%;
+  }
+  .mission-col img {
+    max-width: 5rem;
+  }
+  .mission-col h3 {
+    font-size: 18px;
+  }
+  .mission-col p {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 20px;
+    padding: 10px;
+  }
+}
 /*--------Contact--------*/
 .contact-body {
   align-items: center;
@@ -412,10 +491,10 @@ p {
   background: #fff;
 }
 .contact {
-  height: 80vh;
+  min-height: 80vh;
   align-items: center;
   justify-content: space-evenly;
-  background: #fbfbfb;
+  background: #fff;
   padding: 25px 40px 10px 40px;
   margin: 2px 400px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -427,15 +506,6 @@ p {
   font-size: 41px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  background: -webkit-linear-gradient(
-    right,
-    #56d8e4,
-    #ba91ed,
-    #cfb8ec,
-    #ba91ed
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .contact form {
@@ -470,7 +540,10 @@ form .form-row {
   transform: translateY(-30px);
   font-size: 14px;
   padding-left: 5px;
-  color: #d381dc;
+}
+
+.text-box:focus {
+  border: solid 1px #a05bf6;
 }
 
 .input-data label {
@@ -494,7 +567,7 @@ form .form-row {
   height: 2px;
   width: 100%;
 
-  background: #3498db;
+  background: #ba91ed;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease;
@@ -514,13 +587,7 @@ form .form-row {
   width: 300%;
   position: absolute;
   left: -100%;
-  background: -webkit-linear-gradient(
-    right,
-    #cfb8ec,
-    #d381dc,
-    #56d8e4,
-    #9f01ea
-  );
+  background: #ba91ed;
   transition: all 0.4s;
 }
 .submit-btn .input-data:hover .inner {
@@ -545,7 +612,7 @@ textarea {
   padding-left: 5px;
   padding-top: 3px;
 }
-@media (max-width: 700px) {
+@media screen and (max-width: 720px) {
   .contact .text {
     font-size: 30px;
   }
@@ -560,6 +627,9 @@ textarea {
   }
   .submit-btn .input-data {
     width: 40% !important;
+  }
+  .textarea {
+    width: 20rem;
   }
 }
 
@@ -638,4 +708,12 @@ footer,
 
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+/*--------Contact Animation------*/
+.contact .animate {
+  transform: scale(0.7);
+}
+.contact.show-animate .animate {
+  transform: scale(1);
 }
