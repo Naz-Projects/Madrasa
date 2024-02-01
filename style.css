@@ -295,7 +295,6 @@ p {
 }
 .about-col {
   flex-basis: 50%;
-  border-radius: 10px;
   margin-bottom: 2%;
   margin-top: 2%;
   padding: 0 10px;
@@ -351,7 +350,10 @@ p {
 /*-------About Responsive------*/
 @media screen and (max-width: 720px) {
   .logo-container img {
-    width: 120px;
+    width: 125px;
+  }
+  .logo-container .riwaqlogo {
+    width: 140px;
   }
 
   .about-us {
@@ -372,12 +374,6 @@ p {
   .box-1 {
     padding: 5px;
     border-radius: 10px;
-  }
-  .box-2:hover,
-  .box-1:hover,
-  .logo-container img:hover {
-    transform: scale(1);
-    cursor: pointer;
   }
 }
 
@@ -484,164 +480,101 @@ p {
   }
 }
 /*--------Contact--------*/
-.contact-body {
-  align-items: center;
-  justify-content: center;
-  font-family: "Poppins", sans-serif;
-  background: #fff;
-}
-.contact {
+.contact-container {
   min-height: 80vh;
+  display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: #fff;
-  padding: 25px 40px 10px 40px;
-  margin: 2px 400px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.contact .text {
-  padding-top: 5px;
-  text-align: center;
-  font-size: 41px;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-}
-
-.contact form {
-  width: 400px;
-  padding: 0 0 0 0;
-}
-.contact form .form-row {
+.contact-left {
   display: flex;
-  margin: 20px 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 10px;
 }
-form .form-row .input-data {
-  width: 100%;
-  height: 40px;
-  margin: 0px 20px;
-  position: relative;
+
+.contact-left-title h2 {
+  font-weight: 600;
+  color: #a05bf6;
+  font-size: 40px;
+  margin-bottom: 5px;
 }
-form .form-row {
-  height: 70px;
-}
-.input-data input {
-  display: block;
-  width: 100%;
-  height: 100%;
+
+.contact-left-title hr {
   border: none;
-  font-size: 17px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
-}
-.input-data input:focus ~ label,
-.textarea textarea:focus ~ label,
-.input-data input:valid ~ label,
-.textarea textarea:valid ~ label {
-  transform: translateY(-30px);
-  font-size: 14px;
-  padding-left: 5px;
-}
-
-.text-box:focus {
-  border: solid 1px #a05bf6;
-}
-
-.input-data label {
-  position: absolute;
-  pointer-events: none;
-  bottom: 10px;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  padding-left: 8px;
-}
-
-.input-data .underline {
-  position: absolute;
-  bottom: 0;
-  height: 2px;
   width: 100%;
+  height: 3px;
+  background-color: #a05bf6;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
-.input-data .underline:before {
-  position: absolute;
-  content: "";
-  height: 2px;
-  width: 100%;
-
-  background: #ba91ed;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.3s ease;
-}
-.input-data input:focus ~ .underline:before,
-.input-data input:valid ~ .underline:before {
-  transform: scale(1);
-}
-.submit-btn .input-data {
-  overflow: hidden;
-  height: 45px !important;
-  width: 25% !important;
-}
-
-.submit-btn .input-data .inner {
-  height: 100%;
-  width: 300%;
-  position: absolute;
-  left: -100%;
-  background: #ba91ed;
-  transition: all 0.4s;
-}
-.submit-btn .input-data:hover .inner {
-  left: 0;
-}
-.submit-btn .input-data input {
-  padding-left: 5px;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 17px;
+.contact-inputs {
+  width: 400px;
+  height: 50px;
+  outline: none;
+  border: solid 2px #a05bf6;
+  padding-left: 25px;
   font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
+  border-radius: 50px;
 }
 
-input,
-textarea {
-  padding-left: 5px;
-  padding-top: 3px;
+.contact-left textarea {
+  padding: 10px;
+  height: 140px;
+  border-radius: 15px;
+  resize: none;
 }
+
+.contact-inputs:focus {
+  border: 1px solid #000;
+}
+.contact-inputs::placeholder {
+  color: rgb(150, 163, 176);
+}
+
+.contact-left button {
+  display: flex;
+  background-color: #ba91ed;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 16px;
+  gap: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.contact-left button::before {
+  background-color: #a05bf6;
+}
+
+.contact-left button img {
+  height: 15px;
+}
+/*--------contact rightside---------*/
+
+.contact-right img {
+  width: 30rem;
+}
+/*--------contact responive---------*/
+
 @media screen and (max-width: 720px) {
-  .contact .text {
-    font-size: 30px;
+  .contact-inputs {
+    width: 80vw;
   }
-  .contact form {
-    padding: 10px 0 0 0;
-  }
-  .contact form .form-row {
-    display: block;
-  }
-  form .form-row .input-data {
-    margin: 35px 0 !important;
-  }
-  .submit-btn .input-data {
-    width: 40% !important;
-  }
-  .textarea {
-    width: 20rem;
+  .contact-right {
+    display: none;
   }
 }
 
 /*--------FOOTER---------*/
 
-footer,
-.footer {
+footer {
   height: 15vh;
   overflow: hidden;
-}
-.footer {
-  background: #fbfbfb;
+  background: rgb(150, 163, 176);
   font-family: "Play", sans-serif;
   text-align: center;
 }
@@ -653,26 +586,26 @@ footer,
   width: 100%;
   margin: 0.3% 0%;
   padding: 0.2% 0;
-  color: #000;
+  color: #fff;
   font-size: 0.8em;
 }
 .footer .row ul a {
-  padding: 0 5px;
+  padding: 0 0.5rem;
 }
 
 .footer .row a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
   transition: 0.5s;
 }
 .icons {
   justify-content: center;
   align-items: center;
-  padding: 0px 10px;
+  margin: 0 1rem;
 }
 
 .footer .row a:hover {
-  color: #d381dc;
+  color: #ba91ed;
 }
 
 .footer .row ul {
@@ -687,22 +620,16 @@ footer,
 
 .footer .row a i {
   font-size: 2em;
-  margin: 0% 0%;
+  margin: 0% 0.2%;
 }
 
 @media (max-width: 720px) {
   .footer {
-    text-align: left;
-    padding: 0.5%;
+    justify-content: center;
+    align-items: center;
   }
-
-  .footer .row ul li {
-    display: block;
-    margin: 5px 0px;
-    text-align: left;
-  }
-  .footer .row a i {
-    margin: 0% 3%;
+  .footer .row {
+    margin: 0.3% 0%;
   }
 }
 
@@ -711,9 +638,9 @@ footer,
 }
 
 /*--------Contact Animation------*/
-.contact .animate {
+.all.contact-left .animate {
   transform: scale(0.7);
 }
-.contact.show-animate .animate {
+.all.contact-container.show-animate .animate {
   transform: scale(1);
 }
