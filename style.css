@@ -123,7 +123,7 @@ nav .fa {
 }
 
 .text-box p {
-  color: #cfb8ec;
+  color: #fff;
   margin: 10px 0 40px;
   font-size: 18px;
 }
@@ -221,6 +221,11 @@ p {
   justify-content: center;
 }
 
+.event-container p a {
+  text-decoration: none;
+  color: #a05bf6;
+}
+
 .swiper {
   box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
   border: none;
@@ -297,27 +302,31 @@ p {
 }
 .about-col {
   flex-basis: 50%;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   margin-top: 2%;
-  padding: 0 10px;
+  padding: 0 15px;
   box-sizing: border-box;
   overflow: hidden;
 }
 
 .box-2 {
-  padding: 30px 30px;
-  background-color: #cfb8ec;
+  padding: 12px 10px;
+  background-color: #c6abe7;
   color: #fff;
   transition: 0.2s ease;
   height: 10rem;
 }
 
 .box-1 {
-  background-color: rgb(150, 163, 176);
-  padding: 30px 30px;
+  background-color: rgb(172, 186, 199);
+  padding: 12px 10px;
   color: #fff;
   transition: 0.2s ease;
   height: 10rem;
+}
+
+.box-2 h1,
+.box-1 h1 {
 }
 .logo-container img {
   transition: 0.2s ease;
@@ -325,7 +334,7 @@ p {
 .box-2:hover,
 .box-1:hover,
 .logo-container img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: pointer;
 }
 
