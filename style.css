@@ -115,13 +115,15 @@ nav .fa {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+.purpleText {
+  color: #cfb8ec;
+}
 .text-box h1 {
   font-size: 62px;
 }
 
 .text-box p {
-  color: #fbfbfb;
+  color: #cfb8ec;
   margin: 10px 0 40px;
   font-size: 18px;
 }
@@ -307,6 +309,7 @@ p {
   background-color: #cfb8ec;
   color: #fff;
   transition: 0.2s ease;
+  height: 10rem;
 }
 
 .box-1 {
@@ -314,6 +317,7 @@ p {
   padding: 30px 30px;
   color: #fff;
   transition: 0.2s ease;
+  height: 10rem;
 }
 .logo-container img {
   transition: 0.2s ease;
