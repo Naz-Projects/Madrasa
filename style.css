@@ -361,7 +361,7 @@ p {
 }
 
 /*-------About Responsive------*/
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 900px) {
   .logo-container img {
     width: 125px;
   }
@@ -387,6 +387,10 @@ p {
   .box-1 {
     padding: 5px;
     border-radius: 10px;
+  }
+  .box-1 p,
+  .box-2 p {
+    font-size: 15px;
   }
 }
 
