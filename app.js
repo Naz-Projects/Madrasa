@@ -3,7 +3,7 @@ let sections = document.querySelectorAll("section");
 window.onscroll = () => {
   sections.forEach((sec) => {
     let top = window.scrollY;
-    let offset = sec.offsetTop - 450;
+    let offset = sec.offsetTop - 390;
     let height = sec.offsetHeight;
 
     if (top >= offset && top < offset + height) {
@@ -16,7 +16,7 @@ window.onscroll = () => {
 
 const swiper = new Swiper(".swiper", {
   autoplay: {
-    delay: 3000,
+    delay: 3500,
     disableOnInteraction: false,
   },
   loop: true,
