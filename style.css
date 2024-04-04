@@ -390,7 +390,7 @@ p {
   }
   .box-1 p,
   .box-2 p {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 
@@ -468,7 +468,7 @@ p {
 /*--------MISSION RESPONSIVE--------*/
 @media screen and (max-width: 720px) {
   .mission h1 {
-    font-size: 30px;
+    font-size: 25px;
   }
   .mission .row {
     flex-direction: column;
@@ -484,21 +484,21 @@ p {
     margin-bottom: 3%;
   }
   .mission-col img {
-    max-width: 5rem;
+    max-width: 4rem;
   }
   .mission-col h3 {
     font-size: 18px;
   }
   .mission-col p {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 300;
     line-height: 20px;
-    padding: 10px;
+    padding: 2px 10px 15px 10px;
   }
 }
 /*--------Contact--------*/
 .contact-container {
-  min-height: 80vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -583,6 +583,12 @@ p {
   }
   .contact-right {
     display: none;
+  }
+  .all.contact-left .animate {
+    transform: scale(0.01);
+  }
+  .all.contact-container.show-animate .animate {
+    transform: scale(0.01);
   }
 }
 
