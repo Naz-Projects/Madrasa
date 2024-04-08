@@ -587,6 +587,9 @@ p {
   .contact-right {
     display: none;
   }
+  .contact-right img {
+    width: 0rem;
+  }
   .all.contact-left .animate {
     transform: scale(0.01);
   }
