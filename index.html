@@ -47,7 +47,9 @@
             <li><a href="#home-link">Home</a></li>
             <li><a href="#event">Events</a></li>
             <li><a href="#about-link">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#mission-link">Mission</a></li>
+            <li><a href="#achievements-link">Achievements</a></li>
+            <li><a href="#contact-link">Contact</a></li>
           </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -75,22 +77,17 @@ Achievement
       <div class="swiper animate">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-                <img src="images/aboutMadrasa.PNG" alt="" />
-            </div>
-            <div class="swiper-slide">
-                <img src="images/SaveTheDates.png" alt="" />
-            </div>
-            <div class="swiper-slide">
-                <img src="images/NavigatingTheDunya.png" alt="" />
-            </div>
-            <div class="swiper-slide">
-                <img src="images/Protecting Your Muslim Identity.png" alt="" />
-            </div>
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="images/aboutMadrasa.PNG" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/SaveTheDates.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/NavigatingTheDunya.png" alt="" />
+          </div>
         </div>
-    </div>
-    
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
 
@@ -198,6 +195,73 @@ Achievement
       </div>
     </section>
 
+    <!--------ACHIEVEMENTS------->
+    <section class="achievements show-animate" id="achievements-link">
+      <span id="achievements-link" style="position: absolute; top: -200px;"></span>
+      <h1 class="animate">Achievements</h1>
+      <div class="achievements-numbers">
+        <div class="achievement animate">
+          <div class="number">15</div>
+          <p class="description">Lectures held</p>
+        </div>
+        <div class="achievement animate">
+          <div class="number">$9000+</div>
+          <p class="description">Raised for fundraisers</p>
+        </div>
+        <div class="achievement animate">
+          <div class="number">3</div>
+          <p class="description">Awards won/nominated for</p>
+        </div>
+        <div class="achievement animate">
+          <div class="number">3</div>
+          <p class="description">Dawah tables held</p>
+        </div>
+      </div>
+      <div class="about-row animate">
+        <div class="about-col">
+          <div class="box-1">
+            <h3 class="box-header">CHARITY</h3>
+            <p>In the Fall of 2024, MADRASA proudly hosted its annual “Charity Week,” an inspiring event dedicated to raising funds and collecting donations to support communities in need across the globe. This year’s efforts focused on providing aid to numerous regions, including Gaza (Palestine), Lebanon, Sudan, Bangladesh, Kenya, Malaysia, Albania, Jordan, Iraq, the Philippines, and Somalia. Through a series of engaging activities, fundraising drives, and awareness campaigns, participants worked tirelessly to shed light on these communities' needs
+            </p>
+          </div>
+        </div>
+        <div class="about-col">
+          <div class="box-2">
+            <h3 class="box-header">DAWAH</h3>
+            <p>⁠MADRASA has organized multiple “Dawah” tables, creating a welcoming space for individuals curious about Islam to engage in open, meaningful conversations. These tables offer an opportunity for people to ask questions, gain a deeper understanding of Islamic beliefs and practices, and connect with knowledgeable volunteers who provide thoughtful insights. To encourage continued learning and reflection, interested individuals are also gifted a free Quran as a token of goodwill!
+              </p>
+          </div>
+        </div>
+        <div class="about-col">
+          <div class="box-1">
+            <h3 class="box-header">AWARDS</h3>
+            <p>MADRASA has been nominated for multiple awards throughout its short time as a student organization at the University of Delaware, such as </p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    
+    
+
+    <!--------Contact Us--------->
+    
+    <section class="contact-container show-animate" id="contact-link">
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-left animate">
+        <div class="contact-left-title animate ">
+          <h2 class="animate">Contact Us</h2>
+          <hr>
+        </div>
+        <input type="hidden" name="access_key" value="ebfd8bf9-1531-4711-b209-c4288e69e269">
+        <input type="text" name="name" placeholder="Your Name" class="contact-inputs animate" required>
+        <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+        <textarea name="message" placeholder="Your Message" class="contact-inputs" maxlength="1000" required></textarea>
+        <button type="submit" class="hero-btn">Submit <img src="images/arrow_icon.png"></button>
+      </form>
+      <div class="contact-right show-animate">
+        <img src="images/madrasa2.0Logo.JPG" class="animate">
+
+      </div>
 
     </section>
 
